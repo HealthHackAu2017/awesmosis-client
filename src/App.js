@@ -34,6 +34,9 @@ const App = () => {
         </footer>
       </section>
       <section className="question-and-answers">
+        <aside className="visualisation">
+          Hello
+        </aside>
         <main className="questions">
           <form action="">
             <Element name="question-age" className="element">
@@ -55,9 +58,7 @@ const App = () => {
             />
           </form>
         </main>
-        <aside className="visualisation">
-          Hello
-        </aside>
+
       </section>
     </div>
   );
