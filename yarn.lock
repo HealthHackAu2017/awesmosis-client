@@ -5203,6 +5203,13 @@ react-scripts@1.0.17:
   optionalDependencies:
     fsevents "1.1.2"
 
+react-scroll@^1.6.4:
+  version "1.6.4"
+  resolved "https://registry.yarnpkg.com/react-scroll/-/react-scroll-1.6.4.tgz#c5bca461771bce460a1bfb19550350512b9d076b"
+  dependencies:
+    object-assign "^4.1.1"
+    prop-types "^15.5.8"
+
 react@^16.0.0:
   version "16.0.0"
   resolved "https://registry.yarnpkg.com/react/-/react-16.0.0.tgz#ce7df8f1941b036f02b2cca9dbd0cb1f0e855e2d"

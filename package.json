@@ -10,6 +10,7 @@
     "react-dom": "^16.0.0",
     "react-input-autosize": "^2.0.1",
     "react-scripts": "1.0.17",
+    "react-scroll": "^1.6.4",
     "recompose": "^0.26.0"
   },
   "scripts": {
