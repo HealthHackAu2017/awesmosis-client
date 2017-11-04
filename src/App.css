@@ -1,9 +1,14 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
   font-family: 'Pacifico', cursive;
 }
 
 .splash-page {
   height: 100vh;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -13,6 +18,7 @@
 }
 
 .splash-page__content {
+  min-height: 340px;
   padding: 0 20px;
   max-width: 800px;
   height: 50vh;
@@ -58,4 +64,39 @@
   font-size: 100px;
   text-align: center;
   background-color: #c3eaf1;
+}
+
+.visualisation {
+  
+}
+
+.visualisation__container {
+  border: 1px solid rgba(35,137,218, 0.5);
+  border-top: none;
+  border-radius: 0 0 100vh 100vh;
+  height: 140px;
+  width: 200px;
+  overflow: hidden;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 200px;
+}
+
+.visualisation__inner {
+  background: rgba(35,137,218, 0.3);
+  border-top: none;
+  height: 140px;
+  width: 200px;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  text-align: center;
+}
+
+.visualisation__inner--label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
