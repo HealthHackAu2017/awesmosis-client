@@ -23,6 +23,21 @@
   justify-self: flex-end;
 }
 
+.question-and-answers {
+  position: relative;
+}
+
+.visualisation {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #fff;
+}
+
+.questions {
+  display: block;
+  margin-right: 300px;
+}
+
 .question {
   height: 100vh;
   border: 0;

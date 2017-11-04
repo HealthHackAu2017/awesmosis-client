@@ -33,25 +33,32 @@ const App = () => {
           </Link>
         </footer>
       </section>
-      <form action="">
-        <Element name="question-age" className="element">
-          <TextQuestion
-            id="age"
-            name="age"
-            label="My age is"
-            inputWidth={130}
-            value={age}
-            onChange={handleChange}
-          />
-        </Element>
-        <YesNoQuestion
-          id="hair"
-          label="Am I a bit hairier than my friends?"
-          inputWidth={130}
-          value={hair}
-          onChange={handleChange}
-        />
-      </form>
+      <section className="question-and-answers">
+        <main className="questions">
+          <form action="">
+            <Element name="question-age" className="element">
+              <TextQuestion
+                id="age"
+                name="age"
+                label="My age is"
+                inputWidth={130}
+                value={age}
+                onChange={handleChange}
+              />
+            </Element>
+            <YesNoQuestion
+              id="hair"
+              label="Am I a bit hairier than my friends?"
+              inputWidth={130}
+              value={hair}
+              onChange={handleChange}
+            />
+          </form>
+        </main>
+        <aside className="visualisation">
+          Hello
+        </aside>
+      </section>
     </div>
   );
 };
