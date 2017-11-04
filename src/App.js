@@ -1,27 +1,33 @@
 import React, { Component } from 'react';
+import { compose, withHandlers, withStateHandlers } from 'recompose';
+import AutosizeInput from 'react-input-autosize';
+import Question from './components/question';
 import './App.css';
 
-class App extends Component {
-  constructor(props) {
-    super(props)
+const App = ({...props}) => (
+  <div className="App">
+    <form action="">
+      <Question label="My age is" inputWidth={50} value={props.age} onChange={props.onChange} />
+    </form>
+  </div>
+)
 
-    this.state = {
-      age: 45,
+const enhance = compose(
+  withStateHandlers(
+    ({ initialAge = 25 }) => ({
+      age: initialAge,
+    }),
+    {
+      setAge: () => (inAge) => ({
+        age: inAge
+      })
     }
-  }
+  ),
+  withHandlers({
+    onChange: (props) => (event) => {
+      props.setAge(event.target.value)
+    }
+  })
+)
 
-  render() {
-    return (
-      <div className="App">
-        <form action="">
-          <fieldset className="question">
-            <label className="question__title" htmlFor="age">My age is</label>
-            <input className="question__input" id="age" type="text" value={this.props.age} onChange={this.props.update} />
-          </fieldset>
-        </form>
-      </div>
-    );
-  }
-}
-
-export default App;
+export default enhance(App);
