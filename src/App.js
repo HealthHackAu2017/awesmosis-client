@@ -1,5 +1,6 @@
 import React from 'react';
-import Question from './components/question';
+import TextQuestion from './components/text-question';
+import YesNoQuestion from './components/yes-no-question';
 import { updateField, fields } from './actions/form';
 
 import './App.css';
@@ -17,7 +18,7 @@ const App = () => {
   return (
     <div className="App">
       <form action="">
-        <Question
+        <TextQuestion
           id="age"
           name="age"
           label="My age is"
@@ -25,7 +26,7 @@ const App = () => {
           value={age}
           onChange={handleChange}
         />
-        <Question
+        <YesNoQuestion
           id="hair"
           label="Am I a bit hairier than my friends?"
           inputWidth={130}

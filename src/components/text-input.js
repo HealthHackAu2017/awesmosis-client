@@ -4,7 +4,7 @@ const TextInput = ({ ...props }) => {
   return (
     <input
       id={props.id}
-      name={props.name}
+      name={props.id}
       className="question__input"
       style={{ width: props.inputWidth }}
       maxLength={2}
