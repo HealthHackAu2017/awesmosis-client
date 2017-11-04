@@ -92,12 +92,17 @@
 .toggles label:before {
   content: '/';
   display: inline-block;
-  margin-left: -20px;
+  left: -0.2em;
+  position: absolute;
   color: #000;
 }
 
 .toggles label:first-of-type:before {
   content: '';
+}
+
+.toggles--three label:before {
+  left: -0.5em;
 }
 
 .toggle__input:checked + label {
