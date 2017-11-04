@@ -1,4 +1,6 @@
 import React from 'react';
+import Scroll from 'react-scroll';
+
 import TextQuestion from './components/text-question';
 // import YesNoQuestion from './components/yes-no-question';
 import { updateField, fields } from './actions/form';
@@ -15,25 +17,48 @@ const App = () => {
     updateField(name, value);
   };
 
+  let Link = Scroll.Link;
+  let Element = Scroll.Element;
+
   return (
     <div className="App">
-      <form action="">
-        <TextQuestion
-          id="age"
-          name="age"
-          label="My age is"
-          value={age}
-          onChange={handleChange}
-        />
-        <TextQuestion
-          id="hair"
-          label="Am I a bit hairier than my friends?"
-          inputWidth={200}
-          value={hair}
-          maxLength={3}
-          onChange={handleChange}
-        />
-      </form>
+      <section className="splash-page">
+        <div className="splash-page__content">
+          <h1>Make an informed decision<br />about your reproductive...</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio commodi, ipsa in officia! Est natus culpa nisi inventore sit veniam ab libero harum beatae dicta nulla quis deserunt, dignissimos a!</p>
+        </div>
+        <footer className="splash-page__footer">
+          <Link activeClass="active" to="question-age" spy={true} smooth={true} offset={50} duration={500}>
+            Begin
+          </Link>
+        </footer>
+      </section>
+      <section className="question-and-answers">
+        <main className="questions">
+          <form action="">
+            <Element name="question-age" className="element">
+              <TextQuestion
+                id="age"
+                name="age"
+                label="My age is"
+                inputWidth={130}
+                value={age}
+                onChange={handleChange}
+              />
+            </Element>
+            <TextQuestion
+              id="hair"
+              label="Am I a bit hairier than my friends?"
+              inputWidth={130}
+              value={hair}
+              onChange={handleChange}
+            />
+          </form>
+        </main>
+        <aside className="visualisation">
+          Hello
+        </aside>
+      </section>
     </div>
   );
 };

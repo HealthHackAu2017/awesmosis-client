@@ -1,38 +1,56 @@
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 80px;
+.App {
+  font-family: 'Pacifico', cursive;
 }
 
-.App-header {
-  background-color: #222;
-  height: 150px;
-  padding: 20px;
-  color: white;
+.splash-page {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 25px;
+  background-color: #f3dbeb;
 }
 
-.App-title {
-  font-size: 1.5em;
+.splash-page__content {
+  padding: 0 20px;
+  max-width: 800px;
+  height: 50vh;
+  text-align: center;
 }
 
-.App-intro {
-  font-size: large;
+.splash-page__footer {
+  justify-self: flex-end;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.question-and-answers {
+  position: relative;
+}
+
+.visualisation {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: #fff;
+}
+
+.questions {
+  display: block;
+  margin-right: 300px;
 }
 
 .question {
+  height: 100vh;
   border: 0;
-  font-family: 'Pacifico', cursive;
   font-size: 100px;
+  background-color: #c3eaf1;
 }
 
 .question__input {
   margin-left: 0.25em;
   border-width: 0 0 1px;
+  border-color: #3D8B99;
   font-family: 'Pacifico', cursive;
   font-size: 100px;
   text-align: center;
+  background-color: #c3eaf1;
 }
