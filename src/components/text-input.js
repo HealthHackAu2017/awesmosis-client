@@ -1,7 +1,8 @@
 import React from 'react';
 
-const TextInput = ({...props}) => (
-  <input
+const TextInput = ({ ...props }) => {
+  return (
+    <input
       id={props.id}
       name={props.id}
       className="question__input"
@@ -9,8 +10,9 @@ const TextInput = ({...props}) => (
       maxLength={2}
       type="text"
       value={props.value}
-      onChange={props.onChange}
+      onKeyPress={props.onChange}
     />
-)
+  );
+};
 
-export default TextInput
+export default TextInput;
