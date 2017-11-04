@@ -1,6 +1,6 @@
 import React from 'react';
 import TextQuestion from './components/text-question';
-import YesNoQuestion from './components/yes-no-question';
+// import YesNoQuestion from './components/yes-no-question';
 import { updateField, fields } from './actions/form';
 
 import './App.css';
@@ -22,15 +22,15 @@ const App = () => {
           id="age"
           name="age"
           label="My age is"
-          inputWidth={130}
           value={age}
           onChange={handleChange}
         />
-        <YesNoQuestion
+        <TextQuestion
           id="hair"
           label="Am I a bit hairier than my friends?"
-          inputWidth={130}
+          inputWidth={200}
           value={hair}
+          maxLength={3}
           onChange={handleChange}
         />
       </form>

@@ -2,17 +2,17 @@
 
 export let sessionState = {
   fields: {
-    age: 0,
-    pregnacy_num: 0,
-    fertility_issue: 0,
-    smoker_status: 0,
-    partners: 0,
-    sti_num: 0,
-    sti_type: 0,
-    edm: 0,
-    pco: 0,
-    periods_irregular: 0,
-    ep: 0
+    age: null,
+    pregnacy_num: null,
+    fertility_issue: null,
+    smoker_status: null,
+    partners: null,
+    sti_num: null,
+    sti_type: null,
+    edm: null,
+    pco: null,
+    periods_irregular: null,
+    ep: null
   }
 };
 

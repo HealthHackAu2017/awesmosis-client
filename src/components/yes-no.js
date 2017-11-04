@@ -1,13 +1,7 @@
 import React from 'react';
 import TextInput from './text-input';
-import { withHandlers } from 'recompose';
 
-const convertValue = (value) => {
-  if (typeof value === 'number') {
-    console.info('Number');
-    return value ? 'Yeah' : 'No'
-  }
-
+const convertToNumber = value => {
   if (typeof value === 'string') {
     if (value.slice(0, 1).toLowerCase() === 'y') {
       return 1;
@@ -17,24 +11,33 @@ const convertValue = (value) => {
       return 0;
     }
   }
-}
+};
 
-const YesNo = ({...props}) => (
-  <TextInput
+const convertToString = value => {
+  return value ? 'Yes' : 'No';
+};
+
+const YesNo = ({ ...props }) => {
+  const handleYesNoChange = e => {
+    if (e.target.hasOwnProperty('name')) {
+      const name = e.target.name;
+      const value = convertToNumber(e.target.value);
+
+      props.onChange(name, value);
+    }
+  };
+
+  return (
+    <TextInput
       id={props.id}
       className="question__input"
       style={{ width: props.inputWidth }}
       maxLength={2}
       type="text"
-      value={convertValue(props.value)}
-      onChange={props.handleYesNoChange}
+      value={convertToString(props.value)}
+      onChange={handleYesNoChange}
     />
-)
+  );
+};
 
-const enhance = withHandlers({
-  handleYesNoChange: (props) => (event) => {
-    props.onChange(convertValue(event.target.value));
-  }
-})
-
-export default enhance(YesNo)
+export default YesNo;

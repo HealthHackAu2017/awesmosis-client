@@ -7,7 +7,7 @@ const TextInput = ({ ...props }) => {
       name={props.id}
       className="question__input"
       style={{ width: props.inputWidth }}
-      maxLength={2}
+      maxLength={props.maxLength}
       type="text"
       value={props.value}
       onKeyPress={props.onChange}
