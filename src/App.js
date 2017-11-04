@@ -17,6 +17,12 @@ const App = () => {
 
   return (
     <div className="App">
+      <div className="splash-page">
+        <div className="splash-page__content">
+          <h1>Make an informed decision<br />about your reproductive...</h1>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio commodi, ipsa in officia! Est natus culpa nisi inventore sit veniam ab libero harum beatae dicta nulla quis deserunt, dignissimos a!</p>
+        </div>
+      </div>
       <form action="">
         <TextQuestion
           id="age"

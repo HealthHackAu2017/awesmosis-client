@@ -1,5 +1,4 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import TextInput from './text-input';
 import YesNo from './yes-no';
 
