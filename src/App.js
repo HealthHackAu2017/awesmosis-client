@@ -2,7 +2,8 @@ import React from 'react';
 import Scroll from 'react-scroll';
 
 import TextQuestion from './components/text-question';
-// import YesNoQuestion from './components/yes-no-question';
+import YesNoQuestion from './components/yes-no-question';
+import TripleOptionQuestion from './components/triple-option-question';
 import { updateField, fields } from './actions/form';
 
 import './App.css';
@@ -47,15 +48,27 @@ const App = () => {
                 inputWidth={130}
                 value={age}
                 onChange={handleChange}
+                autoFocus
               />
             </Element>
-            <TextQuestion
-              id="hair"
-              label="Am I a bit hairier than my friends?"
-              inputWidth={130}
-              value={hair}
-              onChange={handleChange}
-            />
+            <Element name="question-hair" className="element">
+              <YesNoQuestion
+                id="hair"
+                label="Am I a bit hairier than my friends?"
+                inputWidth={130}
+                value={hair}
+                onChange={handleChange}
+              />
+            </Element>
+            <Element name="question-num-partners" className="element">
+              <TripleOptionQuestion
+                id="num-partners"
+                label="How many sexual partners have you had?"
+                inputWidth={130}
+                value={hair}
+                onChange={handleChange}
+              />
+            </Element>
           </form>
         </main>
 

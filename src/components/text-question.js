@@ -18,6 +18,7 @@ const Question = ({ ...props }) => {
         type="text"
         value={props.value}
         onChange={props.onChange}
+        autoFocus={props.autoFocus}
       />
     </fieldset>
   );

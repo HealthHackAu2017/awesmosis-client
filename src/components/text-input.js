@@ -11,6 +11,7 @@ const TextInput = ({ ...props }) => {
       type="text"
       value={props.value}
       onKeyPress={props.onChange}
+      autoFocus={props.autoFocus}
     />
   );
 };
