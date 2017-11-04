@@ -15,6 +15,7 @@ const App = ({...props}) => (
         inputWidth={130}
         value={props.hair}
         onChange={props.onChange}
+        yesNo={props.hair}
       />
     </form>
   </div>
@@ -37,7 +38,7 @@ const enhance = compose(
   ),
   withHandlers({
     onChange: (props) => (event) => {
-      props.setAge(event.target.value)
+      props.setHair(event.target.value)
     }
   })
 )

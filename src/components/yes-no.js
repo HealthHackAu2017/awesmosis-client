@@ -9,11 +9,11 @@ const convertValue = (value) => {
   }
 
   if (typeof value === 'string') {
-    if (value.slice(0, 1).toLowerCase === 'y') {
+    if (value.slice(0, 1).toLowerCase() === 'y') {
       return 1;
     }
 
-    if (value.slice(0, 1).toLowerCase === 'y') {
+    if (value.slice(0, 1).toLowerCase() === 'n') {
       return 0;
     }
   }
