@@ -20,6 +20,7 @@ const Question = ({ ...props }) => {
         onChange={props.onChange}
         autoFocus={props.autoFocus}
       />
+      <button type="button" className="big-button">&#62; &#62;</button>
     </fieldset>
   );
 };

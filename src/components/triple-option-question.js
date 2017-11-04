@@ -15,6 +15,7 @@ const TripleOptionQuestion = ({ ...props }) => (
         <label className="toggle toggle__three" htmlFor={`${props.id}-three`}>More than 11</label>
       </div>
     </div>
+    <button type="button" className="big-button">&#62; &#62;</button>
   </fieldset>
 );
 

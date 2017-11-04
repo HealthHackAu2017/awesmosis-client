@@ -13,6 +13,7 @@ const YesNoQuestion = ({ ...props }) => (
         type="text"
         value={props.value}
         onChange={props.onChange} />
+      <button type="button" className="big-button">&#62; &#62;</button>
   </fieldset>
 );
 
