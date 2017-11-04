@@ -34,7 +34,7 @@
   position: relative;
 }
 
-.visualisation {
+.visualisation-aside {
   display: inline-block;
   position: -webkit-sticky;
   position: sticky;
@@ -120,7 +120,7 @@
 }
 
 .visualisation {
-  
+
 }
 
 .visualisation__container {
