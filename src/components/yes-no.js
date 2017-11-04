@@ -1,43 +1,15 @@
 import React from 'react';
 import TextInput from './text-input';
 
-const convertToNumber = value => {
-  if (typeof value === 'string') {
-    if (value.slice(0, 1).toLowerCase() === 'y') {
-      return 1;
-    }
-
-    if (value.slice(0, 1).toLowerCase() === 'n') {
-      return 0;
-    }
-  }
-};
-
-const convertToString = value => {
-  return value ? 'Yes' : 'No';
-};
-
-const YesNo = ({ ...props }) => {
-  const handleYesNoChange = e => {
-    if (e.target.hasOwnProperty('name')) {
-      const name = e.target.name;
-      const value = convertToNumber(e.target.value);
-
-      props.onChange(name, value);
-    }
-  };
-
-  return (
-    <TextInput
-      id={props.id}
-      className="question__input"
-      style={{ width: props.inputWidth }}
-      maxLength={2}
-      type="text"
-      value={convertToString(props.value)}
-      onChange={handleYesNoChange}
-    />
-  );
-};
+const YesNo = ({ ...props }) => (
+  <div className="toggles">
+    <div className="toggles__wrapper">
+      <input name={props.id} id={`${props.id}-yes`} className="toggle__input toggle__input--yes" type="radio" value={1}/>
+      <label className="toggle toggle__yes" htmlFor={`${props.id}-yes`}>Yes</label>
+      <input name={props.id} id={`${props.id}-no`} className="toggle__input toggle__input--yes" type="radio" value={0}/>
+      <label className="toggle toggle__no" htmlFor={`${props.id}-no`}>No</label>
+    </div>
+  </div>
+);
 
 export default YesNo;

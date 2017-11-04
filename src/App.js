@@ -4,6 +4,8 @@ import Scroll from 'react-scroll';
 import TextQuestion from './components/text-question';
 import Visualisation from './components/visualisation';
 // import YesNoQuestion from './components/yes-no-question';
+// import YesNoQuestion from './components/yes-no-question';
+// import TripleOptionQuestion from './components/triple-option-question';
 import { updateField, fields } from './actions/form';
 
 import './App.css';
@@ -60,8 +62,10 @@ const App = () => {
                 inputWidth={130}
                 value={age}
                 onChange={handleChange}
+                autoFocus
               />
             </Element>
+
             <Element name="question-hair" className="element">
               <TextQuestion
                 id="hair"
