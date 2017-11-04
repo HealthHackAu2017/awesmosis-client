@@ -29,13 +29,14 @@
 
 .question {
   border: 0;
-  font-family: 'Courgette', cursive;
-  font-size: 45px;
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
 }
 
 .question__input {
   margin-left: 0.25em;
   border-width: 0 0 1px;
-  font-family: 'Courgette', cursive;
-  font-size: 45px;
+  font-family: 'Pacifico', cursive;
+  font-size: 100px;
+  text-align: center;
 }
